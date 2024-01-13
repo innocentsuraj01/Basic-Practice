@@ -1,0 +1,304 @@
+body{
+    background-image: url("/MMDULoginPage/Maingate.jpg");
+    background-size: cover;     
+  }
+  .login-form{
+    margin-top: 100px;
+    background:#1a11117a;
+    color: white;
+    
+  }
+  .login-heading{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .announcement{
+    margin-top: 100px;
+    background:#1a11117a;
+    color: white;
+  }
+  hr.new1{
+      border: 1px solid red;
+  }
+  .button{
+  background-color:red;
+  color:#ffffff;
+  padding:10px;
+  width:80%;
+  
+  }
+  .button:hover{
+  color:#ffffff;
+  text-decoration:none;
+  }
+  .form-control{
+  width:79%;
+  margin-left:40px;
+  }
+  .button-submit{
+  background-color:red;
+  color:#ffffff;
+  padding:10px;
+  margin-left:40px;
+  width:80%;
+  border:1px solid red;
+  }
+  .button-submit:hover{
+  color:#ffffff;
+  text-decoration:none;
+  }
+  .img-logo{
+      margin-left:30%;
+  }
+
+@media only screen and (max-width: 600px) {
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+    margin-top: 0px;
+    }
+    .alert-danger{
+        width:100% !important;
+        margin-left:0px !important;
+    }
+    .login-form{
+        margin-top:-75px;
+    }
+    .img-logo{
+      margin-left:20%;
+  }
+    
+}
+.forgot-pw{
+color:#ffffff;
+margin-left:85px;
+}
+.forgot-pw:hover{
+color:#ffffff;
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){
+.col-sm-6{
+max-width:100%;
+flex: 0 0 100%;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+    .img-logo{
+      margin-left:35% !important;
+  }
+}
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px){
+.col-sm-6{
+max-width:100% !important;
+flex: 0 0 100% !important;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+.img-logo{
+      margin-left:35% !important;
+  }  
+}
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px){
+.col-sm-6{
+max-width:100% !important;
+flex: 0 0 100% !important;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+  .img-logo{
+      margin-left:35% !important;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+.col-sm-6{
+max-width:100% !important;
+flex: 0 0 100% !important;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+.img-logo{
+      margin-left:35% !important;
+  }	  
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 653px){
+.col-sm-6{
+max-width:100% !important;
+flex: 0 0 100% !important;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+.img-logo{
+      margin-left:35% !important;
+  }  
+}
+@media only screen and (min-device-width: 343px) and (max-device-width: 575px){
+.col-sm-6{
+max-width:100% !important;
+flex: 0 0 100% !important;
+}
+.announcement{
+margin-top: 20px;
+}
+.button{
+  margin-left:0px;
+  padding:7px;
+  width:100%;
+}
+.form-control{
+  width:100%;
+  margin-left:0px;
+  }
+  .button-submit{
+  padding:10px;
+  margin-left:0px;
+  width:100%;
+  border:1px solid red;
+  }
+  .forgot-pw{
+      margin-left:55px !important;
+  }
+  .login-form{
+        margin-top:-75px;
+    }
+.img-logo{
+      margin-left:35% !important;
+  }  
+}
+
+.alert-danger{
+background-color:#FFA500;
+  color:#ffffff;
+  padding:10px;
+  margin-left:40px;
+  width:78%;
+}

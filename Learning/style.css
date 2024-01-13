@@ -1,0 +1,35 @@
+body
+{
+    margin: 0px;
+}
+.navbar 
+{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    background-color: bisque;
+    /* justify-content: space-evenly; */
+    margin-top: 20px;
+    margin: auto;
+}
+ul
+{
+    display: flex;
+    list-style: none;
+}
+li
+{
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    
+}
+li a
+{
+    text-decoration: none;
+    font-size: 25px;
+}
+h1
+{
+    text-align: center;
+}

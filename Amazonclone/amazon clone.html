@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+            border:border-box;
+        }
+        .nav{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            background-color: rgb(19,25,33);
+            justify-content: space-evenly;
+            position:fixed;
+
+        }
+        .logo{
+            /* border: 1px solid blue; */
+            /* width:11%; */
+            height:78%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 13px;
+
+        }
+        .logo img{
+            width: 100%;
+            height:100%;
+        }
+        .add{
+            /* border:1px solid white; */
+            /* width:11%; */
+            height:78%;
+        }
+        .border{
+            border: 1px solid transparent;
+        }
+        .border:hover{
+            border: 2px solid white;
+        }
+        .map{
+            /* border: 1px solid white; */
+            width: 100%;
+            height: auto;
+            display: flex;
+        }
+        .map p{
+             font-size:small;
+             color: white;
+             font-weight: bold;
+             margin-left: 2px;
+             padding-top: px;
+             
+             
+             
+        }
+        .add>p{
+            font-size:small;
+            color: #CCCCCC;
+            margin-left: 16px;
+            margin-top: 6px;
+            
+            
+        }
+        .map>i{
+            color: white;
+        }
+        .search-bar{
+            /* border: 1px solid white; */
+            width:42%;
+            height: 78%;
+            display: flex;
+            align-items: center;
+            padding-right: 0px;
+            
+            
+            
+            
+              
+            
+            
+        }
+        .All{
+            /* border: 1px solid white; */
+            width: 10%;
+            color: white;
+            font-size: small;
+            /* margin-right: 10px; */
+            height: 79%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(230,230,230);
+            color: rgb(183,138,90);
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            
+            
+        }
+        select{
+            width:15px;
+            border: none;
+            background-color: rgb(230,230,230);
+            margin-left: 2px;
+            
+        }
+        .search{
+            /* border: 1px solid white; */
+            width: 80%;
+            height: 79%;
+           
+        }
+        .search-logo{
+            /* border: 1px solid white; */
+            width: 10%;
+            height: 79%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(254,189,105);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .search-logo>i{
+            color: white;
+            font-size: large;
+            color: rgb(107,89,65);
+           
+        }
+        .search>input{
+            width:99%;
+            height: 100%;
+            padding-left:4px;
+            border: none;
+        }
+        .language{
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 78%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+        } 
+        .language>img{
+            width: 35%;
+            height: 3vh;
+        }
+        .language>p{
+            color: white;
+            width: 30%;
+            height: 3vh;
+            font-size:small;
+            font-weight: bold;
+        }
+        .language>i{
+            font-size:small;
+            margin-top:5px;
+        }
+        .sign{
+            /* border: 1px solid white; */
+            width: 10%;
+            height: 78%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            
+
+            /* padding-right:20px;
+            padding-top: 8px; */
+        }
+        .sign>p{
+            font-size:small;
+            color: #CCCCCC;
+            margin-left: 16px;
+        }
+        .sign>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .sign>div>a{
+            font-size:small;
+            color: white;
+            font-weight: bold;
+            margin-left: 2px;
+            padding-top: 4px;
+            text-decoration: none;
+            
+        }
+        .return{
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 78%;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            padding-left: 6px;
+            
+            
+           
+           
+        }
+        .return>.ret{
+            color: white;
+            font-size: small;
+            text-decoration: none;
+        }
+        .return>a{
+            color: white;
+            font-size: small;
+            text-decoration: none;
+        }
+        .cart{
+            /* border: 1px solid white; */
+            width: 6%;
+            height: 78%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+
+        }
+        .cart>a{
+            color: white;
+            text-decoration: none;
+            font-size:small;
+            margin-top: 10px;
+        }
+        .cart>i{
+            font-size: x-large;
+        }
+        .nav2{
+            height: 7vh;
+            background-color: rgb(35,47,62);
+            display: flex;
+        }
+        .menu{
+            /* border: 1px solid white; */
+            color: rgb(220,255,255);
+            width: 5%;
+            height:92%;
+            gap: 5px;
+            font-size: 16px;
+           
+        }
+        .menu>i{
+            font-size: 20px;
+        }
+        a{
+            color: rgb(220,255,255);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .minitv{
+            /* border: 1px solid white; */
+            width: 9%;
+            height:92%;
+           
+        }
+        .sell{
+            /* border: 1px solid white; */
+            width: 4%;
+            height: 92%;
+        }
+        .nav2>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bestsell{
+            /* border: 1px solid white; */
+            width: 7%;
+            height: 92%;
+        }
+        .mobile{
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 92%;
+        }
+        .deal{
+            /* border: 1px solid white; */
+            width: 8%;
+            height: 92%;
+        }
+        .rea{
+            /* border: 1px solid white; */
+            width: 9%;
+            height: 92%;
+        }
+        .customer{
+            /* border: 1px solid white; */
+            width: 10%;
+            height: 92%;
+        }
+        .prime{
+            /* border: 1px solid white; */
+            width: 5%;
+            height: 92%;
+            display: flex;
+            gap: 3px;
+        }
+        .elect{
+            /* border: 1px solid white; */
+            width: 6%;
+            height: 92%;
+            margin-right:40px;
+        }
+        .img{
+            /* border: 1px solid white; */
+            width: 30%;
+            height: 92%;
+            
+        }
+        .img>img{
+            width: 100%;
+            height:100%;
+        }
+        .background{
+            background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/prime/Jup23/acq/T1/heroes/Homepage_DesktopHeroTemplate_1500x600_22June2023_ft._CB578616335_.jpg);
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: rgb(227,230,230);
+        
+        }
+        .background>.container-grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:repeat(auto,1fr);
+            padding-top: 300px;
+            padding-left: 25px;
+            padding-right: 25px;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        .background>.container-grid>div{
+            /* border: 1px solid blue; */
+            height: 410px;
+            padding-top: 10px;
+            padding-left: 15px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            background-color: rgb(255,255,255);
+           
+        }
+       
+        .container-div{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          padding-top: 10px;
+          padding-right: 15px;
+          gap: 15px;
+          
+        }
+        .container-div>div{
+            /* border: 1px solid yellow;  */
+            height: 132px;
+        }
+        .container-div>div>img{
+            width: 100%;
+            height: 80%;
+        }
+        .container-div>div>img+p{
+            font-size: small;
+            color: rgb(96,97,97);
+        }
+        .seeall{
+            color: rgb(104,171,183);
+        }
+        .one-image{
+            
+            display: grid;
+            grid-template-rows: repeat(auto,auto);
+            grid-template-columns: repeat(1,fr);
+            grid-template-areas:
+            "img img"
+            "img img "
+            
+            
+           
+
+        }
+        .one-image>div:nth-child(1){
+           grid-area:img;
+           height: 280px;
+        }
+        
+        .one-image>div:nth-child(1)>img{
+            width: 100%;
+            height:100%;
+        }
+        .part-3{
+            
+            width: 96.5%;
+            height:350px;
+            background-color:rgb(255,255,255);
+            margin: auto;
+            margin-top: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .todaydeals{
+            /* background-color: yellow; */
+            width:97%;
+            height: 50px;
+            margin: auto;
+            display: flex;
+            align-items:center ;
+            margin-top: 10px;
+            gap: 10px;
+           
+        }
+        .parent{
+            /* background-color: green; */
+            width: 97%;
+            height:59%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .parent>div{
+           
+            background-color :rgb(247,248,248);
+            width: 19.5%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow:rgb(247,248,248) 0px 2px 8px 0px;
+        }
+        .parent>div>img{
+            
+            width: 70%;
+            height: 90%;
+              
+        }
+        .part3-footer{
+            width: 97%;
+            height: 25px;
+            /* border: 2px solid red; */
+            display: flex;
+            margin: auto;
+            align-items: center;
+            gap: 70px;
+        }
+        .anchor{
+            color:rgb(204,12,57);
+            font-size: small;  
+        }
+        button{
+            background-color:rgb(204,12,57) ;
+            color: white;  
+        }
+        .item-name{
+            /* border: 2px solid red; */
+            width: 97%;
+            margin: auto;
+            display: flex; 
+            justify-content: space-between;
+        }
+        .item-name>div>a{
+            color: rgb(46,51,48);
+        }
+        .item-name>div{
+            /* border: 1px solid yellow; */
+            width: 19.5%;
+            height: 100%;
+        }
+        .parent1>div:nth-child(1)>img{
+              width: 100%;
+              height: 100%;
+        }
+        .parent1>div:nth-child(2){
+            width: 8%;
+        }
+        .parent1>div:nth-child(2)>img{
+            width: 100%;
+            height: 100%;
+        }
+        .parent1>div:nth-child(3){
+            width:9%;
+        }
+        .parent1>div:nth-child(3)>img{
+            width: 100%;
+            height: 100%;
+        }
+     
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo border">
+                <img src="/Amazon.logo.png" alt="">
+            </div>
+            <div class="add border">
+                <p>Hello</p>
+                <div class="map">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Select your address</p>
+                </div>
+            </div>
+            <div class="search-bar ">
+                <div class="All">All<select name="All" id=""></select></div>
+                <div class="search"><input type="text" placeholder="Search Amazon.in"></div>
+                <div class="search-logo"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+            </div>
+            <div class="language border">
+                 <img src="/Flag.logo.webp" alt="">
+                 <p>EN</p>
+                 <i style="color: rgb(167,172,178);" class="fa-solid fa-caret-down"></i>
+            </div>    
+            <div class="sign border">
+                <p>Hello,sign in</p>
+                <div>
+                    <a href="">&nbsp;&nbsp;Accounts & Lists</a>
+                    <i style="color: rgb(167,172,178); font-size: x-small; margin-top: 8px;" class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="return border">
+                     <a class="ret" href="">Returns</a>
+                     <a href="">& Orders</a>
+            </div>
+            <div class="cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="">Cart</a>
+
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <a href="">All</a>
+            </div>
+            <div class="minitv">
+                <a href="">Amazon MiniTV</a>
+
+            </div>
+            <div class="sell">
+                <a href="">Sell</a>
+            </div>
+            <div class="bestsell">
+                <a href="">Best Sellers</a>
+            </div>
+            <div class="mobile">
+                <a href="Mobiles">Mobiles</a>
+            </div>
+            <div class="deal">
+                <a href="">Today's Deals</a>
+            </div>
+            <div class="rea">
+                <a href="">New Realeases</a>
+            </div>
+            <div class="customer">
+                <a href="">Customer Service</a>
+            </div>
+            <div class="prime">
+                <a href="">Prime</a>
+                <i style="color: rgb(167,172,178); font-size: x-small; margin-top: 8px;" class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="elect">
+                <a href="">Electronic</a>
+            </div>
+            <div class="img">
+                <img src="https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/RockyRaniKiPremKahani/400x39-SWM_NP._CB578526224_.jpg" alt="">
+            </div>
+
+        </div>
+    </header>
+    <div class="background">
+        <div class="background-2">
+            
+        </div>
+        <div class="container-grid">
+            <div>
+                <div class="heading"><h2>Up to 75% off | Headphones</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Boat_Desktop_Qc_1x._SY116_CB577919562_.jpg" alt="">
+                        <p>Up to 75% off | boat</p>
+                    </div>
+                  
+                   
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Boult_Desktop_Qc_1x._SY116_CB577919562_.jpg" alt="">
+                        <p> Up to 75% off | boult</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Noise_Desktop_Qc_1x._SY116_CB577919562_.jpg" alt="">
+                        <p>Up to 75% off | Noise</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/MSO/CE/Unrec1/Zebronics_Desktop_Qc_1x._SY116_CB577919562_.jpg" alt="">
+                        <p>Up to 75% off | Zebronics</p>
+                    </div>
+                <a class="seeall" href="shsbf">see all offers</a>
+                </div>
+            </div>
+            <div>
+                <div class="heading"><h2>Bluetooth Calling Smartwatch starts at...</h2></div>
+                <div class="container-div one-image">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wearables/PC_CategoryCard_379X304_1._SY304_CB614835787_.jpg" alt="">
+                        
+                    </div>
+                  
+                    
+                </div>
+                <br>
+                
+                <a class="seeall" href="See">Shop Now</a>       
+            </div>
+            <div>
+                <div class="heading"><h2>Cricket Fever Offers</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_QC_TV_1X._SY116_CB578640810_.jpg" alt="">
+                        <p>Up to 60% off on TVs
+                            </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_QC_Jersey_1X._SY116_CB578640810_.jpg" alt="">
+                        <p>
+                            Jerseys starting ₹999
+                            </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_QC_Cricket_1X._SY116_CB578640810_.jpg" alt="">
+                        <p>Up to 60% off on cricket bats
+                            </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_QC_Mob_1X._SY116_CB578640810_.jpg" alt="">
+                        <p>
+                            Up to 40% off on mobile phones
+                            </p>
+                    </div>
+                
+                   
+                <a style="margin-top: 33px;" class="seeall" href="">See all offers</a>    
+                </div>
+            </div>
+            <div>
+                <div class="heading"><h2>Try Prime today</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/PC_QuadCard_186X116-1._SY116_CB616375594_.jpg" alt="">
+                        <p>FREE delivery
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/PC_QuadCard_186X116-2._SY116_CB616375594_.jpg" alt="">
+                        <p>
+                            Movies and TV shows
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/PC_QuadCard_186X116-3._SY116_CB616375594_.jpg" alt="">
+                        <p>
+                            Ad-free music</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/ACQ/PC_QuadCard_186X116-4._SY116_CB616375594_.jpg" alt="">
+                        <p>
+                           
+                            Get unlimited 5% cashback on shopping</p>
+                    </div>
+                    <a style="margin-top: 28px;" class="seeall" href="">Enjoy all the benefits of Prime</a>
+                </div>
+            </div>
+            <div>
+                <div class="heading"><h2>Up to 60% off | Styles for men</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-1-186-116._SY116_CB636110853_.jpg" alt="">
+                        <p>clothing</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg" alt="">
+                        <p>Footwear</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg" alt="">
+                        <p>Watches</p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-4-186-116._SY116_CB636110853_.jpg" alt="">
+                        <p>Bags & Wallets</p>
+                    </div>
+                <a style="margin-top:15px;" class="seeall" href="">see all offers</a>    
+                </div>
+               
+            </div>
+            <div>
+                <div class="heading"><h2>Revamp your home in style</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_1_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Bedsheets, curtains & more
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_2_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>
+                            Home decoration
+                            </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_3_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>Home storage
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2021/GW/MSO/April/372x232_4_Low._SY116_CB670263840_.jpg" alt="">
+                        <p>
+                            Lighting solutions
+                           </p>
+                    </div>
+                <a style="margin-top: 13px;" class="seeall" href="">see all offers</a>    
+                </div>
+            </div>
+            <div>
+                <div class="heading"><h2>Computer Accessories | Under ₹499</h2></div>
+                <div class="container-div">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/01_SET1_pc_186x116._SY116_CB577849250_.jpg" alt="">
+                        <p>Gaming Accessories
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/02_SET1_pc_186x116._SY116_CB577849250_.jpg" alt="">
+                        <p>
+                            Keyboard and Mice
+                            </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/03_SET1_pc_186x116._SY116_CB577849250_.jpg" alt="">
+                        <p>Stands, Cables & more
+                           </p>
+                    </div>
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/GW/Sep/04_SET1_pc_186x116._SY116_CB577849250_.jpg" alt="">
+                        <p>
+                            Backpacks
+                            </p>
+                    </div>
+                    <a style="margin-top: 12px;" class="seeall" href="">Explore all</a>
+                </div>
+            </div>
+            <div>
+                <div class="heading"><h2>Great Indian Festival | Coming soon</h2></div>
+                <div class="container-div one-image">
+                    <div>
+                        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/PC_CC_1X._SY304_CB576938243_.jpg" alt="">
+                        
+                    </div>
+                <a style="margin-top: 15px;" class="seeall" href="">see all offers</a>    
+                    </div>
+                </div>
+            </div>
+            <div class="part-3">
+                <div class="todaydeals">
+                    <h2>Today's Deals</h2>
+                    <a style="color: rgb(123,133,133);font: size 0.5em;;" class="seeall" href="">See all deals</a>
+                </div>
+                <div class="parent">
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/415hB0+T6QL._AC_SY200_.jpg" alt="">
+                    </div>
+                   
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/31-h5H+HBwL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/31Ri-FAMBUL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/51evcHXDdEL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/41EM0Pa5jAL._AC_SY200_.jpg" alt="">
+                    </div>
+                </div>
+                <div class="part3-footer">
+                    <div>
+                        <button>Upto 49% off</button>
+                        <a class="anchor" href="">Kickstarter Deal</a>
+                    </div>
+                    <div>
+                        <button>Upto 49% off</button>
+                        <a class="anchor" href="">Kickstarter Deal</a>
+                    </div>
+                    <div>
+                        <button>Upto 49% off</button>
+                        <a class="anchor" href="">Kickstarter Deal</a>
+                    </div>
+                    <div>
+                        <button>Upto 49% off</button>
+                        <a class="anchor" href="">Kickstarter Deal</a>
+                    </div>
+                    <div>
+                        <button>Upto 49% off</button>
+                        <a class="anchor" href="">Kickstarter Deal</a>
+                    </div>
+                   
+
+                </div>
+                <div class="item-name">
+                    <div> <a href="">Cleaning Supplies</a></div>
+                    <div><a href="">Best Offers on V-Guard Products</a></div>
+                    <div> <a href="">Apple AirPods</a></div>
+                    <div> <a href="">Exciting offer on Home Lighting</a></div>
+                    <div> <a href="">Home Essentials from Amazon Brands</a></div>  
+                </div>
+                
+            </div>
+            <div class="part-3">
+                <div class="todaydeals">
+                    <h2>Bestselling picks from Fashion</h2>
+                    <a style="color: rgb(123,133,133);font: size 0.5em;;" class="seeall" href="">See all deals</a>
+                </div>
+                <div class="parent parent1">
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/71-2rHpoEZL._AC_SY200_.jpg" alt="">
+                    </div>
+                   
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/61xICif+37L._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/41HzWjhoQ9L._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/61OP3iVyauL._AC_SY200_.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="https://m.media-amazon.com/images/I/71tduAq7OTL._AC_SY200_.jpg" alt="">
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    
+    </div>
+    
+   
+</body> 
+</html>`

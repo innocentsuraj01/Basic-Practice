@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMDU Front page</title>
+    <link rel="stylesheet" href="Loginpage.css">
+</head>     
+<body class="loaded">
+        <div class="container">
+          <div class="row">
+                  <div class=" col-sm-6 col-md-6 col-lg-6 mobile-view">
+            <div class="announcement">
+                 <h2 style="text-align:center">Announcements</h2>
+                <hr class="new1">
+                <h5 style="color:#ffffff;"><b>Attention: Admission Seekers for the Academic Year 2023-24</b>
+                <ul><br>
+                    <li>Please select <b>Student</b> in the Tab 'Select Role'</li>
+                    <li><b>Username</b>: Your Admission Form Number is Username (e.g. NUR12345)</li>
+                    <li><b>Password</b>  Your Ten Digits Mobile Number (As filled in the Admission Form)</li>
+                </ul>
+                </h5><br>
+                
+                <a href="https://erp.mmumullana.org/entrance" style="color:red;"><h5 style="font-weight:bold;">Click here for Entrance Exam</h5></a>
+    
+            </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-6 col-lg-6 mobile-view">
+              <div class="login-form">
+                                                                <img src="https://www.mmumullana.org/wp-content/uploads/elementor/thumbs/mmdu-logo-inner-phu2q5qubti829yj7htre4c1j2ybchwscv7px07shs.png" class="img-logo">
+               <form method="post" role="form" action="https://erp.mmumullana.org/login/validate_login">
+                <select name="role_id" class="form-control mt-3" id="role_id" onchange="lgin_type()" required="true">
+                                        <option value="">Select Role</option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">Teacher</option>
+                                        <option value="3">Student</option>
+                                    </select>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="UserName / Roll No / Admission No" autocomplete="off" data-validate="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password (Default Password is Roll No.)" autocomplete="off">
+                  </div>
+                  
+                  <button type="submit" class="btn btn-primary btn-block btn-login button-submit">
+                                    Login
+                                </button>
+                </form>
+                 <div class="login-bottom-links">
+                           <!-- <a href="https://erp.mmumullana.org/login/forgot_password" class="link forgot-pw">
+                                Forgot Your Password ?
+                            </a> -->
+                        </div>
+                
+              </div>
+            </div>
+    
+          </div>
+          
+        </div>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+             <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+            <!-- Bottom Scripts -->
+            <script src="https://erp.mmumullana.org/assets/js/gsap/main-gsap.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/bootstrap.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/joinable.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/resizeable.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/neon-api.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/jquery.validate.min.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/neon-login.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/neon-custom.js"></script>
+            <script src="https://erp.mmumullana.org/assets/js/neon-demo.js"></script>
+            <script>
+                function lgin_type() {
+                      var x = document.getElementById("role_id").value;
+                      if(x==1)
+                      {
+                          document.getElementById("email").placeholder = "Email ID";
+                          document.getElementById("password").placeholder ="Password";
+                      }
+                      if(x==2)
+                      {
+                          document.getElementById("email").placeholder = "Employee ID";
+                          document.getElementById("password").placeholder ="Password";
+                      }
+                      if(x==3)
+                      {
+                          document.getElementById("email").placeholder = "UserName / Roll No / Admission No";
+                          document.getElementById("password").placeholder ="Password (Default Password is Roll No.)";
+                      }
+                      if(x==5)
+                      {
+                          document.getElementById("email").placeholder = "Enter 10 Digit Registered Mobile No";
+                          document.getElementById("password").placeholder ="Default Password DOB DDMMYYYY";
+                      }
+                }
+            </script>
+    
+    
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;8299cc5a9b2a397d&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2023.10.0&quot;,&quot;token&quot;:&quot;015c4cc6854643b78116a71fe0dea9a1&quot;}" crossorigin="anonymous"></script>
+    </body>
+</html>
