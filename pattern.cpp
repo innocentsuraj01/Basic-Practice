@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 void pattern1(int n){
-     for(int i=1; i<=5; i++){
+     for(int i=1; i<=n; i++){
         for(int j=1; j<=i; j++){
             cout<<"*";
         } 
@@ -28,13 +28,28 @@ void pattern3(int n){
     }
 }
 
+void pattern4(int n){
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            if((i+j)%2 ==0 ){
+                cout<<"1";
+            }
+            else{
+                cout<<"0";
+            }
+             
+        } 
+        cout<<endl;
+    }
+}
 int main()
 {
     int n;
     cout<<"Enter a number : ";
     cin>>n;
-    // pattern1(n);
-    // pattern2(n);
+    pattern1(n);
+    pattern2(n);
     pattern3(n);
+    pattern4(n);
 
 }
