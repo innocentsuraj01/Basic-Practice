@@ -63,5 +63,5 @@ int main()
     pattern2(n);
     pattern3(n);
     pattern4(n);
-    // pattern5(n);
+    pattern5(n);
 }
