@@ -37,7 +37,6 @@ void pattern4(int n){
             else{
                 cout<<"0";
             }
-             
         } 
         cout<<endl;
     }
