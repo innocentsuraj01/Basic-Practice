@@ -1,7 +1,7 @@
 package Java;
 public class string {
     public static void main(String[] args) {
-        String name = "";
+        String name = "Suraj Kumar";
         String name = new string(original: "");
 
         System.out.println(name.length());
